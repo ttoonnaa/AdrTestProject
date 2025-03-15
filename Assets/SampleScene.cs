@@ -35,6 +35,10 @@ public class TestClass
     }
 }
 
+/// <summary>
+/// TestAsset
+/// 再利用は禁止だよ
+/// </summary>
 public class TestAsset
 {
     private AsyncOperationHandle<Sprite> _handle;
@@ -54,7 +58,7 @@ public class TestAsset
         _canceler?.Cancel();
         _canceler?.Dispose();
         _canceler = null;
-        
+
         if (_handle.IsValid())
             Addressables.Release(_handle);
     }
